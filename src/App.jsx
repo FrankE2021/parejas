@@ -24,9 +24,7 @@ const App = () => {
     setMisCuadros([...cuadrosPrevios]);
    }, []);
 
-   const handleAceptar = () => {
-    setFinalizado(false);
-  };
+   
 
    const tapado = {
     backgroundImage: `url(https://cdn.iconscout.com/icon/premium/png-256-thumb/incognito-2903581-2411326.png)`
@@ -83,7 +81,7 @@ const App = () => {
         <div className="mensaje">
           {mensaje}
         </div>
-        <button onClick={handleAceptar}>Aceptar</button>
+        <button  className="iniciar" onClick={handleReload}>Volver a Jugar</button>
       </div>
     </div>}
 
@@ -112,7 +110,7 @@ const App = () => {
       ( {Math.round(aciertos*100/intentos) } % de aciertos)
       </span>}
     </div>
-    <button  className="iniciar" onClick={handleReload}>Iniciar</button>
+    
     </>
   )
 }
